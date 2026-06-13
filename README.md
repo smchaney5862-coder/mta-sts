@@ -1,12 +1,12 @@
 # MTA-STS Policy for lonestarbackuppower.com
 
-This repository hosts the MTA-STS (Mail Transfer Agent Strict Transport Security) policy for:
+This repository hosts the MTA-STS (Mail Transfer Agent Strict Transport Security) policy for the domain:
 
 - lonestarbackuppower.com
 
-## Policy Location
+## Hosted Policy URL
 
-The policy file is available at:
+When configured, the policy will be available at:
 
 https://mta-sts.lonestarbackuppower.com/.well-known/mta-sts.txt
 
@@ -21,9 +21,18 @@ max_age: 604800
 
 ## Purpose
 
-MTA-STS helps protect email communications by requiring TLS encryption and validating mail server identities for inbound email delivery.
+MTA-STS helps protect email delivery by requiring TLS encryption and validating the destination mail server during inbound email transport.
+
+## Repository Structure
+
+```text
+.
+├── README.md
+└── .well-known/
+    └── mta-sts.txt
+```
 
 ## References
 
-- https://datatracker.ietf.org/doc/html/rfc8461
-- https://support.google.com/a/answer/9261504
+- RFC 8461: https://datatracker.ietf.org/doc/html/rfc8461
+- Google Workspace MTA-STS: https://support.google.com/a/answer/9261504
